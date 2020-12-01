@@ -41,7 +41,7 @@ if (i%2 == 0) {
 else {
 	rob.setPenColor(100000,17, 39);
 
-}
+
 			// #13. set the pen color to red for all odd numbers of i
 			
 			
@@ -55,13 +55,15 @@ for (int j = 0; j < 6; j++) {
 
 	}		
 					// #10. turn the robot to the left by 60
-		rob.turn(60);
+		rob.turn(-60);
 					
 					// #11. move the robot by 50 (play the start button)
 					rob.move(50);
 				
-			
+}
 			// #14. set the pen color to black
+rob.setPenColor(100, 100, 100);
+
 }				
 
 	}	

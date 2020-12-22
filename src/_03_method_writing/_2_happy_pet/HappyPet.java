@@ -16,11 +16,17 @@ String pet = JOptionPane.showInputDialog("What type of pet would you like to buy
 			// 3. Use showOptionDialog to ask the user what they want to do to make their pet happy
 			//    (eg: cuddle, food, water, take a walk, groom, clean up poop).
 			//    Make sure to customize the title and question too.
-			for (int i = 0; i < args.length; i++) {
+			for (int i = 0; i < 5; i++) {
 int task = JOptionPane.showOptionDialog(null, "How would you like to make your pet happy?", "Pet Happieness", 0, JOptionPane.INFORMATION_MESSAGE, null,
-					new String[] { "Clean up the pet's poo", "Amputate the pet's wings", "Feed the pet monkey food" }, null);
-if (task.equals ("Clean up the pet's poo")) {
-	PetJoy ++;
+					new String[] { "Clean up the pet's poo", "Teach the pet to read 'Lord of The Rings'", "Feed the pet monkey food"}, null);
+if (task==0) {
+PetJoy -=10;	
+}
+else if (task==1) {
+PetJoy +=5;
+}
+else if (task==2) {
+PetJoy ++;
 }
 
 			// 5. Use user input to call the appropriate method created in step 4.
@@ -28,7 +34,8 @@ if (task.equals ("Clean up the pet's poo")) {
 			// 6. If you determine the happiness level is large enough, tell the
 			//    user that he loves his pet and use break; to exit for loop.
 JOptionPane.showMessageDialog(null, "Pet Happiness: " + PetJoy);
-	}
+			}
+
 	}
 	// 4. Create methods to handle each of your user selections.
 	//    Each method should create a pop-up with the pet's response (eg. cat might purr when pet), 

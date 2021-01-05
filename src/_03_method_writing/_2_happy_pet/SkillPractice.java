@@ -72,7 +72,7 @@ else {
 
     	// Otherwise, tell them to move to San Diego 
 String $2 = JOptionPane.showInputDialog("How many cars do your family have?");
-int $3 == Integer.parseInt($2);
+int $3 = Integer.parseInt($2);
 if ($3 == 0) {
 	JOptionPane.showMessageDialog(null, "I bet you use public transportation.");
 }
@@ -80,7 +80,10 @@ else if ($3 == 1) {
 	JOptionPane.showInputDialog(null, "What model is it?");
 }
 else if ($3 > 1) {
-	JOptionPane.showInputDialog(null, "I bet your cars have" + x4 + "wheels.");
+	int $4;
+	$4 = $3;
+	$4 *= 4;
+	JOptionPane.showInputDialog(null, "I bet your cars have " + $4 + " wheels.");
 }
 
     	// Create a variable - cars - and initialize it to the number of cars your family has. // If there are 0 cars, use a pop-up to display, "I bet you use public transportation." 
@@ -99,7 +102,8 @@ else if ($3 > 1) {
 
     	void skill5() { // In a pop-up, ask the user for the name of their school 
 
-
+String WARTHOG = JOptionPane.showInputDialog("What school do you go to");
+JOptionPane.showMessageDialog(null, "Unless your name's Bob, "+ WARTHOG +" is a fantastic school.");
 
     	// In another pop-up, tell the user, that their school is a fantastic school. // You must include the name of the school in the message. 
 
